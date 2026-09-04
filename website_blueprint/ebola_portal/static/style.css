@@ -1,0 +1,94 @@
+:root {
+    --clinical-navy: #0b3d5c;
+    --clinical-blue: #1a6fa3;
+    --clinical-teal: #2f9e94;
+    --clinical-bg: #f4f7f8;
+    --panel-bg: #ffffff;
+    --border-grey: #d9e2e6;
+    --text-dark: #1e2a30;
+    --text-muted: #5a6b73;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background: var(--clinical-bg);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 2rem 1.5rem;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--clinical-navy);
+    margin: 0 0 1rem 0;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--clinical-teal);
+}
+
+.section {
+    background: var(--panel-bg);
+    border: 1px solid var(--border-grey);
+    border-radius: 10px;
+    padding: 1.75rem;
+    margin: 0 auto 2rem auto;
+    max-width: 960px;
+    box-shadow: 0 1px 4px rgba(11, 61, 92, 0.06);
+}
+
+/* Plotly figure container spacing */
+.section > div:first-of-type {
+    margin-bottom: 1.25rem;
+}
+
+form {
+    border-top: 1px solid var(--border-grey);
+    padding-top: 1.25rem;
+    margin-top: 0.5rem;
+}
+
+form > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    margin-bottom: 1rem;
+}
+
+form > div label {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+input[type="radio"] {
+    accent-color: var(--clinical-blue);
+    margin-right: 0.35rem;
+    cursor: pointer;
+}
+
+label {
+    cursor: pointer;
+}
+
+.btn {
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.btn-primary {
+    background: var(--clinical-blue) !important;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: var(--clinical-navy) !important;
+}

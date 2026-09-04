@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alex Fraser | Projects</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main_style.css') }}">
+</head>
+<body>
+
+    <header class="site-header">
+        <h1 class="site-title">Alex Fraser</h1>
+        <p class="site-subtitle">Computational biology &amp; bioinformatics projects</p>
+    </header>
+
+    <main>
+        <section class="intro">
+            <p>
+                A collection of interactive data portals built to explore public health,
+                epidemiological, and biomedical datasets.
+            </p>
+        </section>
+
+        <section class="projects">
+            <h2>Projects</h2>
+
+            <div class="project-grid">
+
+                <a href="/ebola_portal/" class="project-card">
+                    <span class="project-flag">🇨🇩</span>
+                    <h3>Ebola Outbreak Portal</h3>
+                    <p>
+                        Tracks the recent Ebola outbreak in the Democratic Republic of the Congo,
+                        with case/death rates by province alongside conflict, displacement, and
+                        food price data.
+                    </p>
+                </a>
+
+                <!-- Add another <a class="project-card"> block here for each new blueprint you register -->
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Alex Fraser</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />   <!--It is necessary to use the UTF-8 encoding with plotly graphics to get e.g. negative signs to render correctly -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+<div>
+<img src="{{ url_for('ebola_portal.static', filename='drc_flag.png') }}" alt="DRC flag" style="height: 2.25rem; width: auto;">
+<h1>Portal for the recent Ebola outbreak in the Democratic Republic of the Congo</h1>
+</div>
+<div class="section", id="ebola_table_anchor">
+<h1>State figures for Ebola</h1>
+{{ ebola_fig | safe }}
+<form method="POST" action="{{ url_for('ebola_portal.results', _anchor='ebola_table_anchor') }}">
+
+    <div>
+
+        <label><input type="radio" value="cases_per_million" name="highlight" checked> Cases</label>
+        
+        <input type="radio" value="deaths_per_million" name="highlight">
+        <label for="deaths">Deaths</label><br>
+
+        <input type="radio" value="displacements_per_million" name="highlight">
+        <label for="displacements">Displacements</label><br>
+
+        <input type="radio" value="deforestation_Mha" name="highlight">
+        <label for="deforestation">Deforestation</label><br>
+
+        <input type="radio" value="health_attacks" name="highlight">
+        <label for="health">Healthcase worker attack incidents</label><br>
+
+    </div>
+    <button type="submit" name="form_id" class="btn btn-primary btn-sm" value="ebola_form" style="background: #6c3ef5;">Apply</button>
+</form>
+</div>
+<div class="section", id="food_table_anchor">
+<h1>The price of staple foods with ebola outbreaks overlaid in red</h1>
+{{ food_fig | safe }}
+<form method="POST" action="{{ url_for('ebola_portal.results', _anchor='food_table_anchor') }}">
+
+    <div>
+
+        <label><input type="radio" value="goat" name="plot_var" checked> Goat</label>
+        
+        <input type="radio" value="chicken" name="plot_var">
+        <label for="chicken">Chicken</label><br>
+
+        <input type="radio" value="beef" name="plot_var">
+        <label for="beef">Beef</label><br>
+
+        <input type="radio" value="cassava" name="plot_var">
+        <label for="cassava">Cassava</label><br>
+
+        <input type="radio" value="beans" name="plot_var">
+        <label for="beans">Beans</label><br>
+
+    </div> 
+    <button type="submit" name="form_id" class="btn btn-primary btn-sm" value="food_form" style="background: #6c3ef5;">Apply</button>
+</form>
+</div>
+</body>
+</html>

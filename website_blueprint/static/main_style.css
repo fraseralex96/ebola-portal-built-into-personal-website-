@@ -1,0 +1,114 @@
+:root {
+    --clinical-navy: #0b3d5c;
+    --clinical-blue: #1a6fa3;
+    --clinical-teal: #2f9e94;
+    --clinical-bg: #f4f7f8;
+    --panel-bg: #ffffff;
+    --border-grey: #d9e2e6;
+    --text-dark: #1e2a30;
+    --text-muted: #5a6b73;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background: var(--clinical-bg);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0 1.5rem 3rem 1.5rem;
+    line-height: 1.5;
+}
+
+.site-header {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 3rem 0 1.5rem 0;
+    text-align: center;
+    border-bottom: 3px solid var(--clinical-teal);
+}
+
+.site-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--clinical-navy);
+    margin: 0 0 0.4rem 0;
+}
+
+.site-subtitle {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+main {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.intro {
+    padding: 1.75rem 0;
+    color: var(--text-muted);
+    font-size: 1rem;
+    max-width: 640px;
+}
+
+.projects h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--clinical-navy);
+    margin-bottom: 1.25rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    display: block;
+    background: var(--panel-bg);
+    border: 1px solid var(--border-grey);
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 1px 4px rgba(11, 61, 92, 0.06);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(11, 61, 92, 0.12);
+}
+
+.project-flag {
+    font-size: 1.75rem;
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.project-card h3 {
+    font-size: 1.1rem;
+    color: var(--clinical-navy);
+    margin: 0 0 0.5rem 0;
+}
+
+.project-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.site-footer {
+    max-width: 960px;
+    margin: 3rem auto 0 auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-grey);
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
